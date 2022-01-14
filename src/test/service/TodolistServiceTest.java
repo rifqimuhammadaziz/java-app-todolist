@@ -9,7 +9,7 @@ import service.TodolistServiceImpl;
 public class TodolistServiceTest {
 
     public static void main(String[] args) {
-        testAddTodolist();
+        testRemoveTodolist();
     }
 
     public static void testShowTodolist() {
@@ -32,6 +32,25 @@ public class TodolistServiceTest {
         todolistService.addTodolist("Todolist Test 3");
         todolistService.addTodolist("Todolist Test 4");
 
+        todolistService.showTodolist();
+    }
+
+    public static void testRemoveTodolist() {
+        TodolistRepository todolistRepository = new TodolistRepositoryImpl();
+        TodolistService todolistService = new TodolistServiceImpl(todolistRepository);
+
+        todolistService.addTodolist("Todolist Test 1");
+        todolistService.addTodolist("Todolist Test 2");
+        todolistService.addTodolist("Todolist Test 3");
+        todolistService.addTodolist("Todolist Test 4");
+
+        todolistService.showTodolist();
+
+        todolistService.removeTodolist(3);
+        todolistService.showTodolist();
+        todolistService.removeTodolist(3);
+        todolistService.showTodolist();
+        todolistService.removeTodolist(3);
         todolistService.showTodolist();
     }
 }
