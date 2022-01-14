@@ -38,7 +38,17 @@ public class TodolistView {
 
     // View to add Todolist
     public void addTodolist() {
+        System.out.println("---------------");
+        System.out.println("ADD NEW TODOLIST");
+        System.out.println("---------------");
 
+        var todo = InputUtil.input("Todo Name (x to cancel)");
+
+        if (todo.equals("x")) {
+            System.exit(1);
+        } else {
+            todolistService.addTodolist(todo);
+        }
     }
 
     // View to remove Todolist
