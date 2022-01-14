@@ -38,6 +38,11 @@ public class TodolistServiceImpl implements TodolistService {
 
     @Override
     public void removeTodolist(Integer number) {
-
+        boolean success = todolistRepository.remove(number);
+        if (success) {
+            System.out.println("Success Delete Todo : " + number);
+        } else {
+            System.out.println("Failed Delete Todo : " + number);
+        }
     }
 }
