@@ -18,9 +18,9 @@ public class TodolistView {
             todolistService.showTodolist();
 
             System.out.println("Menu");
-            System.out.println("1. Add Todo");
-            System.out.println("1. Remove Todo");
-            System.out.println("(x) to exit application.");
+            System.out.println("[1] Add Todo");
+            System.out.println("[2] Remove Todo");
+            System.out.println("[x] exit application.");
 
             var input = InputUtil.input("Choose Menu");
 
