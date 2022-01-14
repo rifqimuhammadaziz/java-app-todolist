@@ -15,7 +15,7 @@ public class TodolistServiceImpl implements TodolistService {
     @Override
     public void showTodolist() {
         System.out.println("---------------");
-        System.out.println("TODOLIST MENU");
+        System.out.println("TODOLIST");
         System.out.println("---------------");
 
         Todolist[] model = todolistRepository.getAll();

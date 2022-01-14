@@ -17,7 +17,7 @@ public class TodolistView {
         while (true) {
             todolistService.showTodolist();
 
-            System.out.println("Menu");
+            System.out.println("[Choose]");
             System.out.println("[1] Add Todo");
             System.out.println("[2] Remove Todo");
             System.out.println("[x] exit application.");
@@ -60,7 +60,7 @@ public class TodolistView {
         var number = InputUtil.input("Choose Number Todo (x to cancel)");
 
         if (number.equals("x")) {
-            System.exit(1);
+            showTodolist();
         } else {
             // convert input number to integer
             todolistService.removeTodolist(Integer.valueOf(number));
