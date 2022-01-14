@@ -53,7 +53,18 @@ public class TodolistView {
 
     // View to remove Todolist
     public void removeTodolist() {
+        System.out.println("---------------");
+        System.out.println("REMOVE TODOLIST");
+        System.out.println("---------------");
 
+        var number = InputUtil.input("Choose Number Todo (x to cancel)");
+
+        if (number.equals("x")) {
+            System.exit(1);
+        } else {
+            // convert input number to integer
+            todolistService.removeTodolist(Integer.valueOf(number));
+        }
     }
 
 }

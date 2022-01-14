@@ -33,7 +33,5 @@ public class TodolistViewTest {
 
         todolistView.addTodolist();
         todolistView.showTodolist();
-        todolistView.addTodolist();
-        todolistView.showTodolist();
     }
 }
